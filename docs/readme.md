@@ -44,3 +44,19 @@ Incremental Updates
 For user profiles or playlists, DouYin Downloader supports incremental updates. It will only download new content since the last run. To enable this feature, use the --incremental flag or set incremental: true in the YAML configuration.
 Example:
 python douyin_downloader.py --url https://douyin.com/user_profile --output downloads --incremental
+
+Additional Tips
+Check Link Validity: Ensure that the Douyin links you provide are valid and publicly accessible.
+Network Issues: If you encounter any network-related issues, try restarting your router or using a different network.
+Cookie Information: Some features may require a valid cookie. Please refer to the Cookie Acquisition Method for details.
+Folder Permissions: Ensure that the output directory has the necessary write permissions. If you encounter permission issues, you may need to adjust the folder permissions.
+Cookie Acquisition Method
+Open the Douyin web page (e.g., Douyin).
+Press F12 to open the developer tools.
+Switch to the "Network" tab.
+Refresh the page and find a request in the list.
+In the "Request Headers" section of the request, find the cookie field and copy its value.
+Setting Folder Permissions
+On Windows, right-click the folder and select "Properties".
+Switch to the "Security" tab.
+Ensure that the current user has "Write" permissions.
