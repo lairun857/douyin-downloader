@@ -18,7 +18,7 @@
         3. **获取代码**  
            使用以下命令克隆项目仓库：
            ...
-           git clone https://github.com/your-project-url.git
+           git clone https://github.com/lairun857/douyin-downloader.git
            cd your-project-name
            ...
            

@@ -16,7 +16,7 @@ We welcome contributions from everyone. Whether it's fixing bugs, adding new fea
 3. **Get the Code**  
    Clone the project repository using the following command:
    ~
-   git clone https://github.com/your-project-url.git
+   git clone https://github.com/lairun857/douyin-downloader.git
    cd your-project-name
    ~
 4. Create a Branch Before you start developing, create a new branch from the main branch:
