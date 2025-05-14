@@ -308,4 +308,14 @@ Before you start developing, create a new branch from the main branch to isolate
         • Email: your-email@example.com
         • Discussion Area: GitHub Discussions
 ## Glossary <!-- by 王瀚龙 -->
+1. Terminology Collection: Gather new terms related to TikTok downloaders during project development and use. Sources include team discussions, user feedback, and technical documents.
+
+2. Terminology Review: Have professionals like technical experts and legal advisors check the collected terms for accuracy, industry standards, and legal compliance. For example, ensure terms involving copyright and data security meet legal requirements.
+
+3. Updating Terminology Documentation: Add reviewed terms to the terms.md file in a uniform format. Also, revise existing terms if more accurate definitions are found.
+
+4. Version Control: Implement version control for the terms.md file to track updates and timestamps, allowing teams to monitor changes and stay updated.
+
+5. Team Notification: Alert team members (developers, testers, customer service, etc.) about terms.md updates via email, instant messaging, or project management tools to ensure they access the latest terminology.
+
 [Contribution guidelines...]
