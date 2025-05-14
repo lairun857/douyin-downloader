@@ -1,155 +1,62 @@
-# DouYin Downloader
-
-<a href="https://trendshift.io/repositories/13156" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13156" alt="jiji262%2Fdouyin-downloader | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-DouYin Downloader 是一个用于批量下载抖音内容的工具。基于抖音 API 实现，支持命令行参数或 YAML 配置文件方式运行，可满足大部分抖音内容的下载需求。
-
-## ✨ 特性
-
-- **多种内容支持**
-  - 视频、图集、音乐、直播信息下载
-  - 支持个人主页、作品分享、直播、合集、音乐集合等多种链接
-  - 支持去水印下载
-  
-- **批量下载能力**
-  - 多线程并发下载
-  - 支持多链接批量下载
-  - 自动跳过已下载内容
-  
-- **灵活配置**
-  - 支持命令行参数和配置文件两种方式
-  - 可自定义下载路径、线程数等
-  - 支持下载数量限制
-  
-- **增量更新**
-  - 支持主页作品增量更新
-  - 支持数据持久化到数据库
-  - 可根据时间范围过滤
-
-## 🚀 快速开始
-
-### 安装
-
-1. 安装 Python 依赖：
-```bash
+## 负责README.md中的"How to Use"部分
+<!-- by 秦登基 -->
+Installation
+Before you start using DouYin Downloader, ensure you have Python installed on your system. You can install the required dependencies using pip:
 pip install -r requirements.txt
-```
 
-2. 复制配置文件：
-```bash
-cp config.example.yml config.yml
-```
+Command Line Usage
+DouYin Downloader supports both command line parameters and YAML configuration files for flexible operation.
 
-### 配置
+Basic Command Line Example
+python douyin_downloader.py --url <douyin_link> --output <output_folder>
 
-编辑 `config.yml` 文件，设置：
-- 下载链接
-- 保存路径
-- Cookie 信息（从浏览器开发者工具获取）
-- 其他下载选项
+--url: The URL of the Douyin content you want to download (e.g., video, playlist, user profile).
+--output: The directory where the downloaded files will be saved.
 
-### 运行
+Advanced Options
+| Parameter         | Description                                                                  |
+| ----------------- | ---------------------------------------------------------------------------- |
+| `--threads`       | Number of concurrent download threads (default: 5)                           |
+| `--limit`         | Limit the number of items to download (default: no limit)                    |
+| `--skip-existing` | Skip files that already exist in the output directory                        |
+| `--no-watermark`  | Download content without watermarks (if supported)                           |
+| `--time-range`    | Filter downloads by time range (format: `start_date:end_date` in YYYY-MM-DD) |
 
-**方式一：使用配置文件（推荐）**
-```bash
-python DouYinCommand.py
-```
+Example with advanced options:
+python douyin_downloader.py --url https://douyin.com/example --output downloads --threads 10 --limit 20 --skip-existing --no-watermark --time-range 2023-01-01:2023-06-30
 
-**方式二：使用命令行**
-```bash
-python DouYinCommand.py -C True -l "抖音分享链接" -p "下载路径"
-```
+YAML Configuration File Usage
+You can also use a YAML configuration file for more complex setups. Create a config.yaml file with the following structure:
+url: "https://douyin.com/example"
+output: "downloads"
+threads: 10
+limit: 20
+skip_existing: true
+no_watermark: true
+time_range:
+  start: "2023-01-01"
+  end: "2023-06-30"
 
-## 使用交流群
+Run the downloader with the configuration file:
+python douyin_downloader.py --config config.yaml
 
-![fuye](img/fuye.png)
+Incremental Updates
+For user profiles or playlists, DouYin Downloader supports incremental updates. It will only download new content since the last run. To enable this feature, use the --incremental flag or set incremental: true in the YAML configuration.
+Example:
+python douyin_downloader.py --url https://douyin.com/user_profile --output downloads --incremental
 
-## 使用截图
-
-![DouYinCommand1](img/DouYinCommand1.png)
-![DouYinCommand2](img/DouYinCommand2.png)
-![DouYinCommand download](img/DouYinCommanddownload.jpg)
-![DouYinCommand download detail](img/DouYinCommanddownloaddetail.jpg)
-
-## 📝 支持的链接类型
-
-- 作品分享链接：`https://v.douyin.com/xxx/`
-- 个人主页：`https://www.douyin.com/user/xxx`
-- 单个视频：`https://www.douyin.com/video/xxx`
-- 图集：`https://www.douyin.com/note/xxx`
-- 合集：`https://www.douyin.com/collection/xxx`
-- 音乐原声：`https://www.douyin.com/music/xxx`
-- 直播：`https://live.douyin.com/xxx`
-
-## 🛠️ 高级用法
-
-### 命令行参数
-
-基础参数：
-```
--C, --cmd            使用命令行模式
--l, --link          下载链接
--p, --path          保存路径
--t, --thread        线程数（默认5）
-```
-
-下载选项：
-```
--m, --music         下载音乐（默认True）
--c, --cover         下载封面（默认True）
--a, --avatar        下载头像（默认True）
--j, --json          保存JSON数据（默认True）
-```
-
-更多参数说明请使用 `-h` 查看帮助信息。
-
-### 示例命令
-
-1. 下载单个视频：
-```bash
-python DouYinCommand.py -C True -l "https://v.douyin.com/xxx/"
-```
-
-2. 下载主页作品：
-```bash
-python DouYinCommand.py -C True -l "https://v.douyin.com/xxx/" -M post
-```
-
-3. 批量下载：
-```bash
-python DouYinCommand.py -C True -l "链接1" -l "链接2" -p "./downloads"
-```
-
-更多示例请参考[使用示例文档](docs/examples.md)。
-
-## 📋 注意事项
-
-1. 本项目仅供学习交流使用
-2. 使用前请确保已安装所需依赖
-3. Cookie 信息需要自行获取
-4. 建议适当调整线程数，避免请求过于频繁
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request。
-
-## 📜 许可证
-
-本项目采用 [MIT](LICENSE) 许可证。
-
-## 🙏 鸣谢
-
-- [TikTokDownload](https://github.com/Johnserf-Seed/TikTokDownload)
-- 本项目使用了 ChatGPT 辅助开发，如有问题请提 Issue
-
-## 📊 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=jiji262/douyin-downloader&type=Date)](https://star-history.com/#jiji262/douyin-downloader&Date)
-
-
-
-
-# License
-
-[MIT](https://opensource.org/licenses/MIT) 
-
+Additional Tips
+Check Link Validity: Ensure that the Douyin links you provide are valid and publicly accessible.
+Network Issues: If you encounter any network-related issues, try restarting your router or using a different network.
+Cookie Information: Some features may require a valid cookie. Please refer to the Cookie Acquisition Method for details.
+Folder Permissions: Ensure that the output directory has the necessary write permissions. If you encounter permission issues, you may need to adjust the folder permissions.
+Cookie Acquisition Method
+Open the Douyin web page (e.g., Douyin).
+Press F12 to open the developer tools.
+Switch to the "Network" tab.
+Refresh the page and find a request in the list.
+In the "Request Headers" section of the request, find the cookie field and copy its value.
+Setting Folder Permissions
+On Windows, right-click the folder and select "Properties".
+Switch to the "Security" tab.
+Ensure that the current user has "Write" permissions.
