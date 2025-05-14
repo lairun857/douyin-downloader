@@ -35,39 +35,55 @@ A professional-grade Python tool for downloading various content types from Douy
 - macOS 12+ (ARM/Intel)
 - Linux (Ubuntu 20.04+)
 
-## Installation <!-- by 邓凯 -->   
-# 执行 pip install 时出现权限不足或版本冲突提示
-# 创建虚拟环境
-python -m venv venv
+## Installation <!-- by 邓凯 -->  
 
-# 激活虚拟环境
-# macOS/Linux
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
 
-# 再次安装依赖
-pip install -r requirements.txt
+When executing `pip install`, prompts about insufficient permissions or version conflicts may appear.  
 
-# 安装卡住、报错 ReadTimeout、ConnectionResetError 等
-pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+Create a virtual environment:  
+```bash  
+python -m venv venv  
+```  
 
-# fatal: unable to access... 或下载速度极慢
-git clone https://github.com.cnpmjs.org/yourname/douyin-downloader.git
+Activate the virtual environment:  
+- For macOS/Linux:  
+```bash  
+source venv/bin/activate  
+```  
+- For Windows:  
+```bash  
+venv\Scripts\activate  
+```  
 
-# 配置文件准备
+Install dependencies again:  
+```bash  
+pip install -r requirements.txt  
+```  
 
-copy config.example.yml config.yml 
+If installation gets stuck or errors like `ReadTimeout` or `ConnectionResetError` occur:  
+```bash  
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple  
+```  
 
-# Windows
+If `fatal: unable to access...` appears or the download speed is extremely slow:  
+```bash  
+git clone https://github.com.cnpmjs.org/yourname/douyin-downloader.git  
+```  
 
-# 方式一：使用配置文件（推荐）
+Prepare the configuration file:  
+```bash  
+copy config.example.yml config.yml  
+```  
 
-python DouYinCommand.py
-
-# 方式二：使用命令行参数（适合脚本调用）
-
-python DouYinCommand.py -C True -l "https://v.douyin.com/xxxxxx/" -p "downloads/"
+For Windows:  
+- **Method 1: Use the configuration file (recommended)**  
+```bash  
+python DouYinCommand.py  
+```  
+- **Method 2: Use command-line arguments (suitable for script invocation)**  
+```bash  
+python DouYinCommand.py -C True -l "https://v.douyin.com/xxxxxx/" -p "downloads/"  
+```
 
 ## Usage Guide
 ### Feature 1 <!-- by 甘润 -现在注册>
