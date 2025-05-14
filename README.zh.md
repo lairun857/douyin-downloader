@@ -43,23 +43,38 @@
 ### 功能一 <!-- by 甘润 -->
 [功能一描述...]
 
-README.zh.md 中的 “使用指南” 部分（功能一）
-功能一：下载抖音视频
-使用前提
-确保系统已安装 Python 3.x。
-安装所需的依赖项，运行命令：pip install -r requirements.txt
-基本使用方法
-打开终端或命令提示符。
-切换到包含抖音下载器脚本所在的目录。
-使用命令运行脚本：python tiktok_downloader.py -u <视频网址>，将 <视频网址> 替换为你想要下载的抖音视频的网址。
-脚本将处理网址并下载视频。默认情况下，下载的视频将保存在 ./downloads 目录中。
-高级使用方法
-你可以使用 -o 或 --output 选项指定自定义输出目录。例如：python tiktok_downloader.py -u <视频网址> -o ./my_downloads
-若要在下载过程中启用详细日志记录模式，可以添加 -v 或 --verbose 标志：python tiktok_downloader.py -u <视频网址> -v
-示例
-如果你想从网址 https://www.tiktok.com/@username/video/123456789 下载视频并保存在默认目录中，只需运行：python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789
-若要对下载位置和日志记录有更多的控制，可以使用以下命令：python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789 -o ./my_downloads -v
-###甘润
+解析上述网页时，我们遇到了一些问题。这是因为链接本身可能存在问题，或者网络连接暂时不稳定。您可以先检查链接的合法性，确保它是完整且有效的抖音视频分享链接。比如，正确的抖音视频链接通常以 “https://www.tiktok.com/@用户名/video/视频ID” 的形式呈现。
+
+如果链接没问题，您可以尝试以下操作：
+1. 检查网络连接，确保网络稳定后再重试。
+2. 尝试直接在浏览器中打开该链接，看是否能正常访问视频。
+3. 如果链接和网络都没问题，可以稍后再尝试解析，可能是服务器暂时出现了问题。
+
+如果您不需要解析这个链接，而是希望我对 “README.zh.md” 中的 “使用指南” 部分进行增删改查，我可以正常帮助您完成这个任务，以下是优化后的 “使用指南” 内容：
+
+**使用指南**
+
+## 功能一：下载抖音视频
+
+### 使用前提
+ - 确保系统已安装 Python 3.x。
+ - 安装所需的依赖项，运行命令：`pip install -r requirements.txt`
+
+### 基本使用方法
+ 1. 打开终端或命令提示符。
+ 2. 切换到包含抖音下载器本脚所在的目录。
+ 3. 使用命令运行脚本：`python tiktok_downloader.py -u <视频网址>`，将 `<视频网址>` 替换为你想要下载的抖音视频的网址。
+ 4. 脚本将处理网址并下载视频。默认情况下，下载的视频将保存在 `./downloads` 目录中。
+
+### 高级使用方法
+ - **指定输出目录**：你可以使用 `-o` 或 `--output` 选项指定自定义输出目录。例如：`python tiktok_downloader.py -u <视频网址> -o ./my_downloads`
+ - **启用详细日志记录模式**：若要在下载过程中启用详细日志记录模式，可以添加 `-v` 或 `--verbose` 标志：`python tiktok_downloader.py -u <视频网址> -v`
+
+### 示例
+ - **默认下载**：如果你想从网址 `https://www.tiktok.com/@username/video/123456789` 下载视频并保存在默认目录中，只需运行：`python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789`
+ - **自定义下载位置和日志记录**：若要对下载位置和日志记录有更多的控制，可以使用以下命令：`python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789 -o ./my_downloads -v`
+
+如果您还有其他需求或需要进一步修改，欢迎随时告诉我。
 ### 功能二 <!-- by 郭海生 -->
 [功能二描述...]
 
