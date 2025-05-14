@@ -72,7 +72,6 @@ A professional-grade Python tool for downloading various content types from Douy
 [Feature 2 description...]
 
 ## How to Use <!-- by 秦登基 -->
-## 负责README.md中的"How to Use"部分
 <!-- by 秦登基 -->
 Installation
 Before you start using DouYin Downloader, ensure you have Python installed on your system. You can install the required dependencies using pip:

@@ -135,7 +135,7 @@ python douyin_downloader.py --url https://douyin.com/user_profile --output downl
 设置文件夹权限
 1. 在 Windows 系统中，右键点击文件夹，选择“属性”。
 2. 切换到“安全”标签页。
-3. 确保当前用户具有“写入”权限。
+3. 确保当前用户具有“写入”权限
 
 ## 贡献指南 <!-- by 冯浩 -->
 
