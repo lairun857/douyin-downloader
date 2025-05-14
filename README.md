@@ -247,5 +247,65 @@ Ensure that the current user has "Write" permissions.
 
 ## Contributing <!-- by 冯浩 -->
 
+<-by 冯浩>
+
+## Contribution Guidelines
+
+We welcome contributions from everyone. Whether it's fixing bugs, adding new features, or improving documentation, your help will make the project better.
+
+### How to Get Started
+
+1. **Read the Documentation**  
+   Before you start, please read the project documentation carefully to understand the project's overall goals, architecture, and technology stack. This will help you better position your contributions and ensure that your work aligns with the project's development direction.
+
+2. **Set Up the Development Environment**  
+   Follow the instructions in the Installation Guide to set up your local development environment. Ensure that all necessary tools and dependencies are correctly installed so that you can develop smoothly.
+
+3. **Get the Code**  
+   Clone the project repository using the following command:
+   ~
+   git clone https://github.com/your-project-url.git
+   cd your-project-name
+   ~
+   Please replace   https://github.com/your-project-url.git   with the actual repository URL and   your-project-name   with the actual project name. (The actual repository URL for this project is: https://github.com/lairun857/douyin-downloader.git)
+
+4. **Create a Branch**
+Before you start developing, create a new branch from the main branch to isolate your changes from the main branch, which facilitates subsequent code reviews and merging. You can create a branch using the following command:
+
+   git checkout -b your-feature-branch
+
+
+**Development Standards**
+    • Code Style: Please follow the existing code style guidelines in the project. If the project does not have a specific style guide, it is recommended to use PEP 8 (for Python projects) or other general conventions for other languages. Consistent code style makes the code easier to read and maintain.
+    • Commit Messages: Commit messages should be concise and clearly describe the changes you have made. It is recommended to use the Conventional Commits format to better manage versions and generate changelogs.
+    • Testing: Before submitting your code, ensure that all tests pass. If you add new features, please also add corresponding test cases.
+    
+**Submitting Contributions**
+
+    1. Commit Your Changes After completing your changes, commit your code：
+    ~
+        git add .
+        git commit -m "Your descriptive commit message"
+        git push origin your-feature-branch
+    ~
+    Please ensure that your commit messages clearly and accurately describe your changes.
+
+    2. Create a Pull Request After committing, create a Pull Request (PR) from your branch on GitHub and provide a detailed description of your changes.
+    3. Code Review We will review your PR as soon as possible. Based on the review comments, you may need to make further modifications.
+    4. Merge Once your PR is accepted, it will be merged into the main branch.
+
+**Other Ways to Contribute**
+    • Report Issues: If you find any issues, please create a new Issue in the issue tracker. Describe the problem, reproduction steps, and your expected solution in detail to help us locate and fix the problem faster.
+    • Improve Documentation: Documentation is an essential part of the project. If you find errors or deficiencies in the documentation, please feel free to submit a PR to improve it.
+    • Submit Suggestions: We welcome any suggestions for improvement. You can submit suggestions in the following ways:
+        • Create a new Issue on GitHub to describe the feature or improvement you want to implement.
+        • Submit a PR to make the improvement.
+**Community Guidelines**
+    We expect all contributors to adhere to the Code of Conduct to create a friendly and respectful community environment. Be polite and patient in communication and collaboration, and respect the opinions and contributions of others.
+
+**Contact Us**
+    If you have any questions or need help, please feel free to contact us through the following methods:
+        • Email: your-email@example.com
+        • Discussion Area: GitHub Discussions
 ## Glossary <!-- by 王瀚龙 -->
 [Contribution guidelines...]
