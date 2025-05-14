@@ -35,8 +35,55 @@ A professional-grade Python tool for downloading various content types from Douy
 - macOS 12+ (ARM/Intel)
 - Linux (Ubuntu 20.04+)
 
-## Installation <!-- by 邓凯 -->   
-[Installation instructions...]
+## Installation <!-- by 邓凯 -->  
+
+
+When executing `pip install`, prompts about insufficient permissions or version conflicts may appear.  
+
+Create a virtual environment:  
+```bash  
+python -m venv venv  
+```  
+
+Activate the virtual environment:  
+- For macOS/Linux:  
+```bash  
+source venv/bin/activate  
+```  
+- For Windows:  
+```bash  
+venv\Scripts\activate  
+```  
+
+Install dependencies again:  
+```bash  
+pip install -r requirements.txt  
+```  
+
+If installation gets stuck or errors like `ReadTimeout` or `ConnectionResetError` occur:  
+```bash  
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple  
+```  
+
+If `fatal: unable to access...` appears or the download speed is extremely slow:  
+```bash  
+git clone https://github.com.cnpmjs.org/yourname/douyin-downloader.git  
+```  
+
+Prepare the configuration file:  
+```bash  
+copy config.example.yml config.yml  
+```  
+
+For Windows:  
+- **Method 1: Use the configuration file (recommended)**  
+```bash  
+python DouYinCommand.py  
+```  
+- **Method 2: Use command-line arguments (suitable for script invocation)**  
+```bash  
+python DouYinCommand.py -C True -l "https://v.douyin.com/xxxxxx/" -p "downloads/"  
+```
 
 ## Usage Guide
 ### Feature 1 <!-- by 甘润 -现在注册>

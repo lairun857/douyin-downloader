@@ -38,7 +38,38 @@
 
 ## 安装说明 <!-- by 邓凯 -->
 [安装步骤...]
+# 执行 pip install 时出现权限不足或版本冲突提示
+# 创建虚拟环境
+python -m venv venv
 
+# 激活虚拟环境
+# macOS/Linux
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+
+# 再次安装依赖
+pip install -r requirements.txt
+
+# 安装卡住、报错 ReadTimeout、ConnectionResetError 等
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# fatal: unable to access... 或下载速度极慢
+git clone https://github.com.cnpmjs.org/yourname/douyin-downloader.git
+
+# 配置文件准备
+
+copy config.example.yml config.yml 
+
+# Windows
+
+# 方式一：使用配置文件（推荐）
+
+python DouYinCommand.py
+
+# 方式二：使用命令行参数（适合脚本调用）
+
+python DouYinCommand.py -C True -l "https://v.douyin.com/xxxxxx/" -p "downloads/"
 ## 使用指南
 ### 功能一 <!-- by 甘润 -->
 [功能一描述...]
