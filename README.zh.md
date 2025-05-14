@@ -43,6 +43,23 @@
 ### 功能一 <!-- by 甘润 -->
 [功能一描述...]
 
+README.zh.md 中的 “使用指南” 部分（功能一）
+功能一：下载抖音视频
+使用前提
+确保系统已安装 Python 3.x。
+安装所需的依赖项，运行命令：pip install -r requirements.txt
+基本使用方法
+打开终端或命令提示符。
+切换到包含抖音下载器脚本所在的目录。
+使用命令运行脚本：python tiktok_downloader.py -u <视频网址>，将 <视频网址> 替换为你想要下载的抖音视频的网址。
+脚本将处理网址并下载视频。默认情况下，下载的视频将保存在 ./downloads 目录中。
+高级使用方法
+你可以使用 -o 或 --output 选项指定自定义输出目录。例如：python tiktok_downloader.py -u <视频网址> -o ./my_downloads
+若要在下载过程中启用详细日志记录模式，可以添加 -v 或 --verbose 标志：python tiktok_downloader.py -u <视频网址> -v
+示例
+如果你想从网址 https://www.tiktok.com/@username/video/123456789 下载视频并保存在默认目录中，只需运行：python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789
+若要对下载位置和日志记录有更多的控制，可以使用以下命令：python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789 -o ./my_downloads -v
+###甘润
 ### 功能二 <!-- by 郭海生 -->
 [功能二描述...]
 

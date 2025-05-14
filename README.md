@@ -42,6 +42,23 @@ A professional-grade Python tool for downloading various content types from Douy
 ### Feature 1 <!-- by 甘润 -现在注册>
 [Feature 1 description...]
 
+README.md 中的 “Usage Guide” 部分
+Feature 1: Download TikTok Videos
+Prerequisites
+Ensure that you have installed Python 3.x on your system.
+Install the required dependencies by running the command: pip install -r requirements.txt.
+Basic Usage
+Open a terminal or command prompt.
+Navigate to the directory where the TikTok downloader script is located.
+Run the script with the command: python tiktok_downloader.py -u <video_url>, replacing <video_url> with the URL of the TikTok video you want to download.
+The script will process the URL and download the video. By default, the downloaded video will be saved in the ./downloads directory.
+Advanced Usage
+You can specify a custom output directory using the -o or --output option. For example: python tiktok_downloader.py -u <video_url> -o ./my_downloads
+To enable verbose mode for detailed logging during the download process, add the -v or --verbose flag: python tiktok_downloader.py -u <video_url> -v
+Example
+To download a video from the URL https://www.tiktok.com/@username/video/123456789 and save it in the default directory, simply run: python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789
+For more control over the download location and logging, you can use: python tiktok_downloader.py -u https://www.tiktok.com/@username/video/123456789 -o ./my_downloads -v
+####甘润
 ### Feature 2 <!-- by 郭海生 -->
 [Feature 2 description...]
 
